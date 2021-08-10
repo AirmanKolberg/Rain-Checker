@@ -1,6 +1,6 @@
 import requests, json
 from json_tools import dict_to_json, json_to_dict
-from pprint import pprint
+from secrets import lat, lon, api_key
 
 url = f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid={api_key}&units=metric'
 
@@ -40,7 +40,7 @@ def get_datetime_from_weather_data(forecast_hours, weather_data):
     hourly_list = weather_data['hourly']
     dt_hours = list()
 
-    pprint(hourly_list)
+    print(hourly_list)
 
     # Only view the next x hours in the forecast
     for i in range(len(hourly_list) - forecast_hours):
