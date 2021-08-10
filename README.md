@@ -12,6 +12,9 @@ so I hope you enjoy the app.
 `mv secrets_example.py secrets.py`.
 4. Run the app with `python3 app.py` to test it out, and feel free to amend this file to your liking.
 
+By default, a Boolean called `get_new_data` within `app.py` is set to True.  You can switch this to False after
+the first run if you do not wish to collect new data and just go off of the data that was already collected.
+
 That's it!  Enjoy!
 
 ---
