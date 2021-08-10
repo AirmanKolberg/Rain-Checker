@@ -11,7 +11,7 @@ def get_48_hour_weather_data():
     weather_data = json.loads(response.text)
 
     # Save the data to a JSON file
-    dict_to_json(weather_data, 'test-JSON.json')
+    dict_to_json(weather_data, 'weatherData.json')
 
     return weather_data
 
@@ -54,12 +54,13 @@ def get_datetime_from_weather_data(forecast_hours, weather_data):
 
 if __name__ == '__main__':
 
-    get_new_data = False
+    # Set this to True to grab new data, or False to use old .json file
+    get_new_data = True
 
     if get_new_data:
         weather_info = get_48_hour_weather_data()
     else:
-        weather_info = json_to_dict('test-JSON.json')
+        weather_info = json_to_dict('weatherData.json')
 
     rain = check_for_rain(6, weather_info)
 
