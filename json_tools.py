@@ -1,7 +1,6 @@
 import json
 
 
-# Convert JSON file to Python dictionary
 def json_to_dict(json_location):
 
     with open(json_location) as f:
@@ -11,7 +10,6 @@ def json_to_dict(json_location):
     return data
 
 
-# Save Python dictionary to JSON file
 def dict_to_json(dictionary, json_location):
 
     with open(json_location, 'w') as json_file:
